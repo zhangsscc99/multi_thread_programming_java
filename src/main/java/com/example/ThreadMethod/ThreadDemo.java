@@ -12,5 +12,13 @@ public class ThreadDemo {
 
         t1.start();
         t2.start();
+        Thread t = Thread.currentThread();
+        String name = t.getName();
+        System.out.println(name);
+
+        /*
+        1线程执行，线程就会停留
+        2时间到了，线程会自动醒来。
+         */
     }
 }
