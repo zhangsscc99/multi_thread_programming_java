@@ -4,9 +4,9 @@ import com.example.multi_thread_programming_java.MyThread;
 
 public class ThreadDemo {
     public static void main(String[] args) {
-        MyThread t1 = new MyThread();
-        MyThread t2 = new MyThread();
-        MyThread t3 = new MyThread();
+        MyThreadSafe t1 = new MyThreadSafe();
+        MyThreadSafe t2 = new MyThreadSafe();
+        MyThreadSafe t3 = new MyThreadSafe();
 
         t1.setName("window1");
         t2.setName("window2");
