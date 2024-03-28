@@ -2,6 +2,10 @@ package com.example.multi_thread_programming_java;
 
 public class MyThread extends Thread{
 
+    public  MyThread () {
+
+    }
+
     public MyThread(String name) {
         super(name);
     }
