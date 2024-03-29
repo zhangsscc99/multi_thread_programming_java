@@ -7,10 +7,10 @@ import com.example.multi_thread_programming_java.MyThread;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class MyThreadReentrantLock extends Thread{
+public class MyThreadReentrantLock extends Thread {
     static int ticket = 0;
 
-    Lock lock = new ReentrantLock();
+    static Lock lock = new ReentrantLock();
 
     static Object obj = new Object();
 
@@ -23,20 +23,28 @@ public class MyThreadReentrantLock extends Thread{
             //字节码文件对象是锁唯一的。可以当作锁。
             //synchronized (MyThread.class) {
             lock.lock();
-                if (ticket < 100) {
-                    try {
-                        Thread.sleep(10);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+            try {
+                if (ticket == 1000) {
+                    break;
+
+                } else {
+    //                try {
+                    Thread.sleep(10);
+    //                } catch (InterruptedException e) {
+    //                    e.printStackTrace();
+    //                }
                     ticket++;
                     System.out.println(getName() + "is selling" + ticket);
-                } else {
-                    break;
-                }
-            lock.unlock();
+                    //lock.unlock();
 
+                }
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            } finally {
+                lock.unlock();
             }
         }
     }
 }
+
+

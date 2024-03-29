@@ -1,12 +1,13 @@
 package com.example.ThreadSafe3;
 
-public class ThreadDemoSafeThread {
+public class ThreadDemoReentrantLock {
     public static void main(String[] args) {
         //MyThreadReentrantLock mr = new MyThreadReentrantLock();
 
-        Thread t1 = new Thread();
-        Thread t2 = new Thread();
-        Thread t3 = new Thread();
+        MyThreadReentrantLock t1 = new MyThreadReentrantLock();
+        MyThreadReentrantLock t2 = new MyThreadReentrantLock();
+        MyThreadReentrantLock t3 = new MyThreadReentrantLock();
+
 
         t1.setName("window1");
         t2.setName("window2");
