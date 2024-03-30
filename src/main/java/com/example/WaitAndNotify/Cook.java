@@ -27,6 +27,7 @@ public class Cook extends Thread {
                     //侥幸等待的消费者开吃
                 }
             }
+            //System.out.println("the cooker made a bowl of noodles");
         }
     }
 }

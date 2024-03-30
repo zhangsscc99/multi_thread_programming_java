@@ -18,7 +18,7 @@ public class Cook extends Thread {
                 //put方法的底层已经有锁了
                 System.out.println("the cooker put a bowl of noodles");
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
     }

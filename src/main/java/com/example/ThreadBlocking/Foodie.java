@@ -14,7 +14,7 @@ public class Foodie extends  Thread{
             try {
                 //锁的嵌套会死锁。
                 String food = queue.take();
-                System.out.println("the cooker put a bowl of noodles");
+                System.out.println(food);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
