@@ -14,5 +14,6 @@ public class MyInetAddressDemo1 {
 
         String ip = address.getHostAddress();
         System.out.println(ip);
+
     }
 }
